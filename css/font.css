@@ -1,0 +1,19 @@
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir.eot'),
+  url('../fonts/Vazir.woff2') format('woff2'),
+  url('../fonts/Vazir.woff') format('woff'),
+  url('../fonts/Vazir.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: IRANSans;
+  src: url('../fonts/IRANSansWeb.eot'),
+  url('../fonts/IRANSansWeb.woff2') format('woff2'),
+  url('../fonts/IRANSansWeb.woff') format('woff'),
+  url('../fonts/IRANSansWeb.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

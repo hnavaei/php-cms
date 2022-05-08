@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import "font.css";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazir";
+  direction: rtl;
+  text-align: right;
+  background: #f5f5f5;
+}
+
+td, th {
+  text-align: center;
+}
+
+header {
+  height: 5rem;
+  box-shadow: 0 2px 2px -2px grey !important;
+}
+
+.text-yellow {
+  color: #FFFF02;
+}
+
+.text-red {
+  color: #ED2124;
+}
+
+.text-blue {
+  color: #207FDD;
+}
+
+.bg-white {
+  background: #e6e6e6 !important;
+}
+
+.btn-info {
+  background: #207FDD !important;
+}
+
+.bg-org {
+  background: #F2711D;
+}
+
+.login {
+  background: url("../images/how-to-find-a-doctor-in-croatia.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
+.img-login-wrapper {
+  text-align: center;
+}
+.img-login-wrapper div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 3px solid #207FDD;
+  border-radius: 50%;
+  padding: 2rem;
+  overflow: hidden;
+  background: white;
+}
+.img-login-wrapper div img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#login-form, .card-custom {
+  border: 3px solid #207FDD;
+  padding: 1.5rem 4rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.card-custom {
+  border-width: 1px;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar-custom {
+  position: fixed;
+  right: 0;
+  top: 5rem;
+  bottom: 0;
+  height: 100vh;
+  width: 14rem;
+  background: #207FDD;
+  padding: 2rem 0.8rem;
+  transition: 0.3s ease-in-out;
+  z-index: 999;
+}
+@media screen and (max-width: 1200px) {
+  #navbar-custom {
+    visibility: hidden;
+    opacity: 0;
+    right: -100px;
+  }
+}
+#navbar-custom.active {
+  visibility: visible;
+  opacity: 1;
+  right: 0;
+}
+#navbar-custom .user-img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: auto;
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#navbar-custom .user-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+#navbar-custom .list-group-item {
+  color: white;
+  border: 0 !important;
+  background: transparent;
+  padding: 7px 15px;
+}
+#navbar-custom .list-group-item:hover {
+  background: #F2711D;
+}
+
+.content-body {
+  margin: 50px 0 0;
+  background: url("../images/how-to-find-a-doctor-in-croatia.jpg") no-repeat center;
+  background-size: cover;
+  padding: 10px;
+}
+
+form, table.table {
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #207FDD;
+  padding: 7px 15px;
+}
+
+.custom-file-label::after {
+  content: "انتخاب تصویر" !important;
+}
+
+.img-rounded {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#bar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  #bar {
+    display: inline-block;
+  }
+}
+#bar img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.ico {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.app-item {
+  cursor: pointer;
+}
+
+.app-item-link {
+  border: 1px dashed #e6e6e6;
+  color: #28a745;
+}
+.app-item-link:hover {
+  color: #28a745;
+}
+.app-item-link-active {
+  color: white;
+  background: #34ce57;
+  border-color: transparent;
+}
+.app-item-link-active:hover {
+  color: white;
+}
+
+#getAppointmentModal .modal {
+  height: 80vh;
+  position: fixed !important;
+  top: 5%;
+}
+#getAppointmentModal .modal .modal-body {
+  min-height: 30vh;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.modal {
+  overflow: -moz-scrollbars-none;
+}
+
+.modal {
+  -ms-overflow-style: none;
+}
+
+.loading-icon {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  table.table {
+    display: block;
+    overflow: scroll;
+    width: 100%;
+  }
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printModal .modal-body, #printModal .modal-body * {
+    visibility: visible;
+  }
+}
+
+/*# sourceMappingURL=custom-style.css.map */
